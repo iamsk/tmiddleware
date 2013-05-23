@@ -56,11 +56,11 @@ middleware for tornado
 
 web:
 
-![TMiddleware-web]({{ site.photos }}/tmiddleware-web.jpg)
+![TMiddleware-web](tmiddleware-web.jpg)
 
 console:
 
-![TMiddleware-console]({{ site.photos }}/tmiddleware-console.jpg)
+![TMiddleware-console](tmiddleware-console.jpg)
 
 ##Plugins
 
