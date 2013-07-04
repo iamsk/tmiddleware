@@ -1,6 +1,7 @@
 class Memcache(object):
     """
     address=127.0.0.1:11211
+    # TODO 链接断开后没有自动重连机制
     """
     def __init__(self, address):
         from memcache import Client

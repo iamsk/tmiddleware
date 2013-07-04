@@ -5,7 +5,7 @@ import tornado.httpserver
 from tornado.options import define, options
 
 from tmiddleware.handler import TMiddlewareHandler
-import backend
+from tmiddleware.plugins import backend
 
 define('port', 7777)
 MIDDLEWARES = ['plugins.session.SessionMiddleware']

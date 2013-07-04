@@ -12,8 +12,9 @@ define("middlewares", default=MIDDLEWARES, help="middleware class list")
 class HelloWorld(TMiddlewareHandler):
     def get(self):
         import time
+
         time.sleep(4)
-        return {'hello': 'world'}
+        return self.write({'hello': 'world'})
 
 
 class Test(AsyncHTTPTestCase):
