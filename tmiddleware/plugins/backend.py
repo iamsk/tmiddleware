@@ -1,3 +1,5 @@
+#-*- coding: utf-8 -*-
+
 class Memcache(object):
     """
     address=127.0.0.1:11211
