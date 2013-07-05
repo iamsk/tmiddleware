@@ -40,6 +40,6 @@ class SessionMiddleware(Session):
         self.handler.session = self._get_session(self.sid)
 
     def before_response_hook(self, chunk=None):
-        if not self.sid:
+        if self.sid != self.handler.session['id']:
             self.handler.set_secure_cookie('sid', self.handler.session['id'])
         self._set_session(self.handler.session['id'], self.handler.session)
