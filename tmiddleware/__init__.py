@@ -34,13 +34,13 @@ class TMiddleware():
                     logging.error("cant instantiate cls: {0}".format(e), exc_info=True)
                     print "cant instantiate cls", e
 
-    def _run_hooks(self, type, middlewares, kwargs=None):
+    def _run_hooks(self, type, middlewares, chunk=None):
         for middleware in middlewares:
             try:
                 if type == 'request':
                     middleware.request_hook()
                 if type == 'before_response':
-                    middleware.before_response_hook(kwargs)
+                    middleware.before_response_hook(chunk)
                 if type == 'after_response':
                     middleware.after_response_hook()
             except Exception as e:
@@ -52,7 +52,7 @@ class TMiddleware():
         """
         self._run_hooks('request', self.request_middlewares)
 
-    def before_response_hooks(self, chunk):
+    def before_response_hooks(self, chunk=None):
         """
         Executed in finish() of the Request, as after http method
         """
