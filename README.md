@@ -1,24 +1,28 @@
 TMiddleware
-==================
+===========
 
-middleware for tornado
+Middleware for tornado
 
 [![Build Status](https://travis-ci.org/iamsk/tmiddleware.png)](https://travis-ci.org/iamsk/tmiddleware)
 
-##Installation
+## Installation
 
+	pip install tmiddleware
+	
+	or
+    
     git clone git@github.com:iamsk/tmiddleware.git
     cd tmiddleware
     python setup.py install
 
-##Requirements
+## Requirements
 
 * python 2.6 or 2.7
-* tornado
+* tornado 2.4+
 
-##Minimal Demo
+## Minimal Demo
 
-###$ more examples/miminal.py
+### $ more examples/miminal.py
 
     import tornado
     import tornado.httpserver
@@ -50,9 +54,9 @@ middleware for tornado
 
 此处使用了自带的两个 middleware，一个用于查看请求的 profile 信息，一个用于在终端下记录超时的请求
 
-###$ python miminal.py
+### $ python miminal.py
 
-###$ chrome http://localhost:7777/?__profile__=true
+### $ chrome http://localhost:7777/?__profile__=true
 
 web:
 
